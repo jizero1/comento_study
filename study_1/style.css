@@ -1,0 +1,8 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    padding: 10px; /* 내부 여백을 10px만큼 준다 */
+    margin: 20px; /* 외부 여백을 20px만큼 준다 */
+    border: 1px solid black; /* 1px 두께, solid스타일의 검정색 테두리 */
+}
