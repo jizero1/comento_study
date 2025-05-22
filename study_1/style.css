@@ -1,8 +1,150 @@
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: pink;
-    padding: 10px; /* 내부 여백을 10px만큼 준다 */
-    margin: 20px; /* 외부 여백을 20px만큼 준다 */
-    border: 1px solid black; /* 1px 두께, solid스타일의 검정색 테두리 */
+.common-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 950px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(243, 245, 247);
+    padding: 50px;
+}
+
+/* --------- 헤더 ---------  */
+.header {
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 40px;
+    padding-bottom: 15px;
+}
+
+/* ---------- about --------  */
+#about {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.title::before {
+    content: "";
+    width: 140px;
+    height: 15px;
+    border-radius: 5px;
+    background-color: rgba(155, 195, 244, 0.4);
+    position: absolute;
+    z-index: -1;
+}
+
+#about .about-container {
+    width: 100%;
+}
+
+#about .about-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+#about .about-text {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#about .about-text p {
+    line-height: 30px;
+    letter-spacing: 0.5px;
+}
+
+#about .about-text strong {
+    margin-right: 12px;
+}
+
+
+/* ---------- skills --------- */
+#skills {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#skills .skills-container {
+    width: 500px;
+    height: 250px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px rgb(0, 0, 0, 0.2);
+}
+
+.skills-container h3 {
+    text-align: center;
+}
+
+.skills-images {
+    display: flex;
+    margin-top: 10px;
+}
+
+.skills-images img {
+    width: 25px;
+    margin: 0px 5px 0px 5px;
+}
+
+.skills-container ul {
+    list-style: none;
+    flex-direction: column;
+    padding: 0px;
+}
+
+.skills-container ul li {
+    font-size: 18px;
+    margin: 10px 0px 10px 0px;
+}
+
+/* ---------- footer -------- */
+#footer {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(230, 232, 234);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer p {
+    color: rgb(77, 77, 77);
+    font-size: 14px;
 }
