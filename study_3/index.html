@@ -9,25 +9,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<!-- 배터리 표시, 현재시간표시, 알림설정표시, 알림현황표시 -->
-<!-- 충전선은 화면 아래에 표시 -->
-
 <body>
-    <div class="container">
-        <!-- 휴대폰 -->
-        <main class="phone">
+    <main class="container common-flex">
+        <!-- 휴대폰 홈화면 -->
+        <div class="phone" id="phone-home">
             <!-- 상단에 노치, 배터리 표시 영역 -->
-            <div class="phone__top">
+            <div class="phone__top common-flex">
                 <div class="phone__top-notch"></div>
                 <i class="fa-solid fa-wifi"></i>
-                <div class="phone__top-battery">
-                    <!-- 시간 표시. 실시간으로 시간이 줄어들고, 내부 색상도 줄어들어야함 -->
+                <div class="phone__top-battery common-flex">
+                    <span id="phone__top-battery-value"></span>
                 </div>
             </div>
             <!-- 시간 표시 영역  -->
-            <div class="phone__clock">
-                <div class="phone__clock-date">6월 1일 일요일</div>
-                <div class="phone__clock-time">16:34</div>
+            <div class="phone__clock common-flex">
+                <span id="phone__clock-date-value"></span>
+                <div class="phone__clock-time">
+                    <span id="phone__clock-time-value"></span>
+                    <span id="phone__clock-time-second"></span>
+                </div>
             </div>
             <!-- 손전등, 카메라 아이콘 및 언더바  -->
             <div class="phone__bottom">
@@ -37,8 +37,15 @@
                 </div>
                 <div class="phone__bottom-underline"></div>
             </div>
-        </main>
-    </div>
+        </div>
+        <!-- 휴대폰 충전  -->
+        <div class="battery"></div>
+        <!-- 휴대폰 시간 설정 화면  -->
+        <div class="phone">
+        </div>
+    </main>
+
+    <script src="clock.js"></script>
 </body>
 
 </html>

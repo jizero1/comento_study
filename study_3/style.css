@@ -3,33 +3,40 @@
     margin: 0px;
 }
 
+/* 중복으로 사용되는 코드 - 중앙정렬 */
+.common-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .container {
     width: 100vw;
     height: 100vh;
     background-color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
 }
 
-/* ---------- 휴대폰 ---------- */
+/* ---------- 휴대폰 홈화면---------- */
 .container .phone {
-    width: 350px;
-    height: 660px;
-    /* 배경은 새로고침 할때마다 색깔 변화 */
-    background-color: white;
+    width: 340px;
+    height: 650px;
     border: 10px solid black;
     border-radius: 45px;
     position: relative;
+    margin: 0px 20px 0px 20px;
+    margin-bottom: 70px;
 }
 
-/* 휴대폰 상단 (노치, 배터리) */
+.container #phone-home {
+    background-image: url('./assets/images/background.jpg');
+    background-size: 330px 630px;
+}
+
+/* -------- 휴대폰 상단 (노치, 배터리) --------*/
 .phone .phone__top {
     width: 100%;
     height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
 }
 
@@ -48,33 +55,49 @@
 
 .phone__top .phone__top-battery {
     width: 30px;
-    height: 18px;
+    height: 19px;
     background-color: black;
-    border-radius: 6px;
+    border-radius: 7px;
     position: absolute;
     right: 17px;
 }
 
-/* 휴대폰 날짜 및 시간 표시  */
+.phone__top-battery #phone__top-battery-value {
+    color: white;
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+/* ------- 휴대폰 날짜 및 시간 표시 ------- */
 .phone .phone__clock {
     width: 100%;
     height: 130px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 
-.phone__clock .phone__clock-date {
+.phone__clock #phone__clock-date-value {
     font-size: 17px;
 }
 
 .phone__clock .phone__clock-time {
+    width: 200px;
+    margin-top: 7px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.phone__clock-time #phone__clock-time-value {
     font-size: 60px;
     font-weight: 800;
 }
+.phone__clock-time #phone__clock-time-second {
+    font-size: 16px;
+    position: absolute;
+    right: 2px;
+    bottom: 18px;
+}
 
-/* 휴대폰 하단 손전등, 카메라, 언더바 */
+/* ------- 휴대폰 하단 손전등, 카메라, 언더바 ------ */
 .phone .phone__bottom {
     width: 100%;
     height: 100px;
@@ -111,4 +134,9 @@
     right: 0;
     bottom: 10px;
     border-radius: 10px;
+}
+
+/* ------ 휴대폰 충전 ------ */
+.battery {
+
 }
