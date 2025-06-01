@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>최지영의 시계</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<!-- 배터리 표시, 현재시간표시, 알림설정표시, 알림현황표시 -->
+<!-- 충전선은 화면 아래에 표시 -->
+
+<body>
+    <div class="container">
+        <!-- 휴대폰 -->
+        <main class="phone">
+            <!-- 상단에 노치, 배터리 표시 영역 -->
+            <div class="phone__top">
+                <div class="phone__top-notch"></div>
+                <i class="fa-solid fa-wifi"></i>
+                <div class="phone__top-battery">
+                    <!-- 시간 표시. 실시간으로 시간이 줄어들고, 내부 색상도 줄어들어야함 -->
+                </div>
+            </div>
+            <!-- 시간 표시 영역  -->
+            <div class="phone__clock">
+                <div class="phone__clock-date">6월 1일 일요일</div>
+                <div class="phone__clock-time">16:34</div>
+            </div>
+            <!-- 손전등, 카메라 아이콘 및 언더바  -->
+            <div class="phone__bottom">
+                <div class="phone__bottom-icons">
+                    <i class="phone__icon fas fa-bolt"></i>
+                    <i class="phone__icon fas fa-camera"></i>
+                </div>
+                <div class="phone__bottom-underline"></div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
