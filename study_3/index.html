@@ -12,34 +12,39 @@
 <body>
     <main class="container common-flex">
         <!-- 휴대폰 홈화면 -->
-        <div class="phone" id="phone-home">
-            <!-- 상단에 노치, 배터리 표시 영역 -->
-            <div class="phone__top common-flex">
-                <div class="phone__top-notch"></div>
-                <i class="fa-solid fa-wifi"></i>
-                <div class="phone__top-battery common-flex">
-                    <span id="phone__top-battery-value"></span>
+        <div class="phone-container common-flex">
+            <div class="phone" id="phone-home">
+                <!-- 상단에 노치, 배터리 표시 영역 -->
+                <div class="phone__top common-flex">
+                    <div class="phone__top-notch"></div>
+                    <i class="fa-solid fa-wifi"></i>
+                    <div class="phone__top-battery common-flex">
+                        <span id="phone__top-battery-value"></span>
+                    </div>
+                </div>
+                <!-- 시간 표시 영역  -->
+                <div class="phone__clock common-flex">
+                    <span id="phone__clock-date-value"></span>
+                    <div class="phone__clock-time">
+                        <span id="phone__clock-time-value"></span>
+                        <span id="phone__clock-time-second"></span>
+                    </div>
+                </div>
+                <!-- 손전등, 카메라 아이콘 및 언더바  -->
+                <div class="phone__bottom">
+                    <div class="phone__bottom-icons">
+                        <i class="phone__icon fas fa-bolt"></i>
+                        <i class="phone__icon fas fa-camera"></i>
+                    </div>
+                    <div class="phone__bottom-underline"></div>
                 </div>
             </div>
-            <!-- 시간 표시 영역  -->
-            <div class="phone__clock common-flex">
-                <span id="phone__clock-date-value"></span>
-                <div class="phone__clock-time">
-                    <span id="phone__clock-time-value"></span>
-                    <span id="phone__clock-time-second"></span>
-                </div>
-            </div>
-            <!-- 손전등, 카메라 아이콘 및 언더바  -->
-            <div class="phone__bottom">
-                <div class="phone__bottom-icons">
-                    <i class="phone__icon fas fa-bolt"></i>
-                    <i class="phone__icon fas fa-camera"></i>
-                </div>
-                <div class="phone__bottom-underline"></div>
+            <!-- 배터리 충전 선  -->
+            <div id="battery-charging">
+                <span>⚡️</span>
             </div>
         </div>
-        <!-- 휴대폰 충전  -->
-        <div class="battery"></div>
+        </div>
         <!-- 휴대폰 시간 설정 화면  -->
         <div class="phone">
         </div>
