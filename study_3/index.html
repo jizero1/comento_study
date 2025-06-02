@@ -45,12 +45,44 @@
             </div>
         </div>
         </div>
-        <!-- 휴대폰 시간 설정 화면  -->
-        <div class="phone">
+
+
+
+
+
+        <!-- 휴대폰 알람 설정 화면  -->
+        <div class="phone-container common-flex">
+            <div class="alarm phone">
+                <!-- 알람 화면 상단 (시간, 와이파이 아이콘) -->
+                <div class="alarm__top">
+                    <span class="alarm__top-time">19:59</span>
+                    <i class="fa-solid fa-wifi"></i>
+                </div>
+                <!-- 알람 설정 하는 부분  -->
+                <div class="alarm__setting">
+                    <p class="alarm__setting-text">알람</p>
+                    <div class="alarm__setting-time">
+                        <div class="alarm__setting-time-input">
+                            <input class="alarm__input" type="text" placeholder="시" id="alarmHour"></input>
+                            <span>:</span>
+                            <input class="alarm__input" type="text" placeholder="분" id="alarmMinute"></input>
+                            <span>:</span>
+                            <input class="alarm__input" type="text" placeholder="초" id="alarmSecond"></input>
+                        </div>
+                        <button class="alarm__setting-time-btn" id="alarm__setting-time-btn">+</button>
+                    </div>
+                </div>
+                <!-- 설정한 알람 리스트  -->
+                <div class="alarm__list" id="alarm__list">
+                    
+                </div>
+            </div>
+            <div id="alarm__alert"></div>
         </div>
     </main>
 
     <script src="clock.js"></script>
+    <script src="alarm.js"></script>
 </body>
 
 </html>

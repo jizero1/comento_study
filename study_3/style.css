@@ -3,7 +3,7 @@
     margin: 0px;
 }
 
-/* 중복으로 사용되는 코드 - 중앙정렬 */
+/* 자주 사용되는 코드 (중앙정렬) */
 .common-flex {
     display: flex;
     align-items: center;
@@ -16,18 +16,19 @@
     background-color: rgb(255, 255, 255);
     flex-direction: row;
 }
+
 .phone-container {
     width: 400px;
     height: 750px;
     position: relative;
-    /* background-color: blue; */
 }
-/* ---------- 휴대폰 홈화면---------- */
+
+/* ---------- 휴대폰 홈 화면 컨테이너 및 배경 ---------- */
 .container .phone {
     width: 340px;
     height: 650px;
     border: 10px solid black;
-    border-radius: 45px;
+    border-radius: 48px;
     position: relative;
     margin: 0px 20px 0px 20px;
     margin-bottom: 70px;
@@ -54,8 +55,9 @@
     bottom: 0px;
     cursor: pointer;
 }
+
 .container::before {
-    content: '👈 충전 선을 클릭하면, 배터리가 100%로 충전됩니다.';
+    content: '충전 단자를 클릭하면, 배터리가 100%로 충전됩니다.';
     position: absolute;
     bottom: 10px;
     margin-left: 50px;
@@ -167,8 +169,107 @@
     border-radius: 10px;
 }
 
-/* ------ 휴대폰 충전 ------ */
-.battery {
-    width: 40px;
-    height: 100px;
+
+
+/* -------------- 휴대폰 알람 설정 화면 ------------- */
+.container .alarm {
+    background-color: black;
+
+}
+
+/* -------- 휴대폰 알람 설정 화면 상단 (시간, 와이파이 아이콘) -------- */
+.alarm .alarm__top {
+    width: 100%;
+    height: 40px;
+    padding: 0px 25px 0px 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.alarm__top .alarm__top-time {
+    font-size: 15px;
+    font-weight: 600;
+}
+.alarm__top .fa-wifi {
+    font-size: 13px;
+}
+
+/* ---------- 알람 설정 하는 부분 ----------- */
+.alarm .alarm__setting {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    /* background-color: green; */
+}
+.alarm__setting .alarm__setting-text {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+}
+/* 알람 설정 - 시, 분, 초 입력 부분  */
+.alarm__setting .alarm__setting-time {
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: pink; */
+}
+.alarm__setting-time .alarm__setting-time-input {
+    display: flex;
+    align-items: center;
+}
+.alarm__setting-time-input span{
+    color: white;
+    font-size: 15px;
+    font-weight: 800;
+}
+.alarm__setting-time-input .alarm__input {
+    width: 75px;
+    height: 40px;
+    margin: 0px 5px 0px 5px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+.alarm__setting-time-input .alarm__input:focus {
+    outline: none;
+    box-shadow: none;
+    border: 3px solid rgb(233,159,58);
+}
+/* 알람 설정 - 알람 추가 버튼  */
+.alarm__setting-time .alarm__setting-time-btn {
+    background-color: rgb(255, 255, 255,0);
+    border: none;
+    font-size: 29px;
+    color: rgb(233,159,58);
+    cursor: pointer;
+}
+
+/* ----------- 설정한 알림 리스트 ------------ */
+.alarm .alarm__list {
+    width: 100%;
+    height: 400px;
+    /* background-color: blue; */
+    padding: 10px;
+}
+
+/* --------------- 알람 관련 경고창 ------------ */
+.phone-container #alarm__alert {
+    width: 220px;
+    height:120px;
+    background-color: blue;
+    border-radius: 10px;
+    position: absolute;
+    top: 250px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    z-index: 10;
+    display: none;
+
 }
