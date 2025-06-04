@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>최지영의 시계</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <main class="container common-flex">
+        <!-- 📌 휴대폰 홈화면 -->
+        <div class="phone-container common-flex">
+            <div class="phone" id="phone-home">
+                <!-- 상단에 노치, 배터리 표시 영역 -->
+                <div class="phone__top common-flex">
+                    <div class="phone__top-notch"></div>
+                    <i class="fa-solid fa-wifi"></i>
+                    <div class="phone__top-battery common__top-battery common-flex">
+                        <span class="common__top-battery-value" id="phone__top-battery-value"></span>
+                    </div>
+                </div>
+                <!-- 시간 표시 영역  -->
+                <div class="phone__clock common-flex">
+                    <span id="phone__clock-date-value"></span>
+                    <div class="phone__clock-time">
+                        <span id="phone__clock-time-value"></span>
+                        <span id="phone__clock-time-second"></span>
+                    </div>
+                </div>
+                <!-- 손전등, 카메라 아이콘 및 언더바  -->
+                <div class="phone__bottom">
+                    <div class="phone__bottom-icons common-flex-spacebetween">
+                        <i class="phone__icon fas fa-bolt"></i>
+                        <i class="phone__icon fas fa-camera"></i>
+                    </div>
+                    <div class="phone__bottom-underline"></div>
+                </div>
+            </div>
+            <!-- 배터리 충전 선  -->
+            <div id="battery-charging">
+                <span>⚡️</span>
+            </div>
+        </div>
+        </div>
+
+
+
+
+
+        <!-- 📌 휴대폰 알람 설정 화면  -->
+        <div class="phone-container common-flex">
+            <div class="alarm phone" id="alarm-background">
+                <!-- 배터리 0%되면 검정배경으로 알람화면을 덮음 -->
+                <div id="alarm__overlay"></div>
+                <!-- 알람 화면 상단 (시간, 와이파이 아이콘) -->
+                <div class="alarm__top common-flex-spacebetween">
+                    <span class="alarm__top-time" id="alarm__top-time"></span>
+                    <i class="fa-solid fa-wifi"></i>
+                    <div class="alarm__top-battery common__top-battery common-flex">
+                        <span class="common__top-battery-value" id="alarm__top-battery-value"></span>
+                    </div>
+                </div>
+                <!-- 알람 설정 하는 부분  -->
+                <div class="alarm__setting">
+                    <p class="alarm__setting-text">알람</p>
+                    <div class="alarm__setting-time common-flex-spacebetween">
+                        <div class="alarm__setting-time-input">
+                            <input class="alarm__input" type="text" placeholder="시" id="alarmHour" ></input>
+                            <span>:</span>
+                            <input class="alarm__input" type="text" placeholder="분" id="alarmMinute"></input>
+                            <span>:</span>
+                            <input class="alarm__input" type="text" placeholder="초" id="alarmSecond"></input>
+                        </div>
+                        <button class="alarm__setting-time-btn" id="alarm__setting-time-btn">+</button>
+                    </div>
+                </div>
+                <!-- 특별한 기능 없이 알람 페이지 디자인을 위해 추가된 div -->
+                <div class="alarm__addDesign">
+                    <p class="alarm__addDesign-text"><i class="fa-solid fa-bed"></i>수면 | 기상</p>
+                    <div class="alarm__addDesign-box common-flex-spacebetween">
+                        <p>알람 없음</p>
+                        <button>설정</button>
+                    </div>
+                </div>
+                <!-- 설정한 알람 리스트  -->
+                <div class="alarm__list" id="alarm__list">
+                    <p class="alarm__list-header">기타</p>
+                </div>
+            </div>
+            <div class="common-flex" id="alarm__alert"></div>
+        </div>
+    </main>
+
+    <script src="clock.js"></script>
+</body>
+</html>
