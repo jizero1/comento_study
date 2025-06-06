@@ -3,7 +3,7 @@
     margin: 0px;
 }
 
-/* 자주 사용되는 코드 (중앙정렬) */
+/* 자주 사용되는 코드 (정렬) */
 .common-flex {
     display: flex;
     align-items: center;
