@@ -1,0 +1,49 @@
+/* 자주 사용되는 코드 (정렬) */
+.common-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.common-flex-spacebetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    background-image: url('./assets/background-dot.webp');
+}
+
+/* 할일이 없을때만 표시되는 텍스트 */
+.container .container__noText {
+    font-size: 16px;
+    color: rgb(165, 165, 165);
+    position: fixed;
+}
+
+/* 할일 추가 버튼 */
+.container .container__todoAddBtn {
+    position: fixed;
+    bottom: 30px;
+    width: 140px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(84, 84, 84);
+    color: white;
+    font-size: 30px;
+    transition: width 0.4s;
+}
+.container .container__todoAddBtn:hover {
+    width: 170px;
+}
