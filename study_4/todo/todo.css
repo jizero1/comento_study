@@ -28,6 +28,7 @@
     font-size: 16px;
     color: rgb(165, 165, 165);
     position: fixed;
+    /* display: block; */
 }
 
 /* 할일 추가 버튼 */
@@ -46,4 +47,13 @@
 }
 .container .container__todoAddBtn:hover {
     width: 170px;
+}
+
+/* 할일 추가 모달  */
+.modal {
+    width: 500px;
+    height: 450px;
+    background-color: blue;
+    display: none;
+    z-index: 999;
 }
