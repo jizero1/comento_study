@@ -46,6 +46,7 @@ const modalInput = () => {
             // 삭제 버튼 클릭시 해당 할일은 삭제 
             deleteBtn.addEventListener("click", () => {
                 todoCard.remove();
+                // 할일을 다 삭제해서 아무것도 없으면 다시 noTodo()함수호출하여, 할일을 추가하라는 텍스트 띄우기
                 noTodo();
             })
             noTodo();
